@@ -12,9 +12,6 @@ class CategorySerializer(serializers.ModelSerializer):
             'id',
             'title',
             'description',
-            'is_active',
-            'created_date',
-            'updated_date',
         )
 
 
@@ -41,8 +38,5 @@ class PostSerializer(serializers.ModelSerializer):
             'id',
             'title',
             'description',
-            'is_active',
-            'created_date',
-            'updated_date',
             'category',
         )
