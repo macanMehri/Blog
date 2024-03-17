@@ -77,7 +77,7 @@ class Post(BaseModel):
     category = models.ForeignKey(
         Category,
         null=False,
-        on_delete=models.deletion.CASCADE,
+        on_delete=models.CASCADE,
         verbose_name='Category'
     )
 
