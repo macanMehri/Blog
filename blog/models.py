@@ -50,6 +50,12 @@ class Category(BaseModel):
         return self.title
 
 
+    @staticmethod
+    def get_actives() -> list:
+        '''Returns a list of active objects'''
+        return Category.objects.filter(is_active=True).order_by('pk')
+
+
 class Post(BaseModel):
 
     title = models.CharField(
@@ -78,3 +84,9 @@ class Post(BaseModel):
 
     def __str__(self) -> str:
         return f'{self.category} - {self.title} : {self.description}'
+
+
+    @staticmethod
+    def get_actives() -> list:
+        '''Returns a list of active objects'''
+        return Post.objects.filter(is_active=True).order_by('pk')
