@@ -24,3 +24,12 @@ class PostViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
     queryset = Post.get_actives()
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter)
+    filterset_fields = (
+        'id',
+        'category'
+    )
+    search_fields = (
+        'id',
+        'title',
+        'description'
+    )
