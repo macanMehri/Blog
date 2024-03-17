@@ -18,6 +18,18 @@ class CategorySerializer(serializers.ModelSerializer):
         )
 
 
+class CategoryTitleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = Category
+
+        fields = (
+            'id',
+            'title',
+        )
+
+
 class PostSerializer(serializers.ModelSerializer):
 
     class Meta:

@@ -51,9 +51,14 @@ class Category(BaseModel):
 
 
     @staticmethod
-    def get_actives() -> list:
+    def get_actives():
         '''Returns a list of active objects'''
         return Category.objects.filter(is_active=True).order_by('pk')
+
+
+    def get_actives_titles() -> list:
+        '''Returns a list of titles of active objects'''
+        return Category.objects.all().filter(is_active=True)
 
 
 class Post(BaseModel):
@@ -87,6 +92,6 @@ class Post(BaseModel):
 
 
     @staticmethod
-    def get_actives() -> list:
+    def get_actives():
         '''Returns a list of active objects'''
         return Post.objects.filter(is_active=True).order_by('pk')
