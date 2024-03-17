@@ -90,6 +90,7 @@ class AdminCategory(admin.ModelAdmin):
     )
     list_display_links = ('id', 'title',)
     list_filter = ('is_active', 'created_date', 'updated_date',)
+    list_editable = ('is_active',)
     # Order by primary key
     ordering = ('pk',)
 
@@ -113,6 +114,7 @@ class AdminPost(admin.ModelAdmin):
     )
     list_display_links = ('id', 'title')
     list_filter = ('category', 'is_active', 'created_date', 'updated_date',)
+    list_editable = ('is_active',)
     # Order by primary key
     ordering = ('pk',)
 
