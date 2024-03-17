@@ -29,6 +29,7 @@ class PostSerializer(serializers.ModelSerializer):
             'id',
             'title',
             'description',
+            'category',
             'is_active',
             'created_date',
             'updated_date',
