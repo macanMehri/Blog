@@ -32,17 +32,17 @@ class CategoryTitleSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
 
+    category = CategorySerializer()
     class Meta:
 
         model = Post
-        category = CategorySerializer
 
         fields = (
             'id',
             'title',
             'description',
-            'category',
             'is_active',
             'created_date',
             'updated_date',
+            'category',
         )
