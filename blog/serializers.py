@@ -29,7 +29,6 @@ class CategoryTitleSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
 
-    category = CategorySerializer()
     class Meta:
 
         model = Post
